@@ -831,6 +831,7 @@
     self.selectionIndicator.backgroundColor = self.tintColor;
     
     self.hairline.frame = [self hairlineRect];
+    self.hairline.hidden = YES;
 }
 
 - (void)configureButtonForSegment:(NSUInteger)segment
