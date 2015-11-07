@@ -263,7 +263,7 @@
         return nil;
     }
     
-    return segment < self.counts.count ? self.counts[segment] : @(0);
+    return segment < self.counts.count ? self.counts[segment] : @"0";
 }
 
 - (UIColor *)titleColorForState:(UIControlState)state
@@ -445,7 +445,7 @@
         _counts = [NSMutableArray arrayWithCapacity:items.count];
         
         for (int i = 0; i < items.count; i++) {
-            [self.counts addObject:@0];
+            [self.counts addObject:@"0"];
         }
     }
     
@@ -595,7 +595,7 @@
     _items = items;
 }
 
-- (void)setCount:(NSNumber *)count forSegmentAtIndex:(NSUInteger)segment
+- (void)setCount:(NSString *)count forSegmentAtIndex:(NSUInteger)segment
 {
     if (!count || !self.items || self.isImageMode) {
         return;
